@@ -17,7 +17,7 @@ client.on ("message", message => {
          var help_embed = new Discord.RichEmbed()
          .setColor("#FFBF00")
          .setTitle("**Commande disponible**")
-         .addField("prefix", "prefix = $", true)
+         .addField("prefix", "prefix = ;", true)
          .addField("help", "afficher le panel d'aide", true)
          .addField("spam", "spam + (message)", true)
          .addField("stop", "commande pour arreter le spam", true)
