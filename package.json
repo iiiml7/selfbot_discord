@@ -2,7 +2,7 @@
   "name": "selfbot_discord",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "sizez.js",
   "dependencies": {
     "discord.js": "^11.4.2"
   },
