@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 var prefix = "$";
 
-client.login("NDg2MjM3NTM3NDMwNjY3Mjk2.Dm_3ig.o1QDFnXEbdL8BWAMj_TfraN5B80");
+client.login(process.env.BOT_TOKEN);
 
 client.on("ready", () => {
     console.log("SelfBot is start");
