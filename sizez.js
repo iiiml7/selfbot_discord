@@ -20,6 +20,7 @@ client.on ("message", message => {
          .addField("prefix", "prefix = $", true)
          .addField("help", "afficher le panel d'aide", true)
          .addField("spam", "spam + (message)", true)
+         .addField("stop", "commande pour arreter le spam", true)
          .setFooter("Help panel")
          message.channel.sendMessage(help_embed);
         }
