@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-var prefix = ";";
+var prefix = "$";
 
 client.login(process.env.BOT_TOKEN);
 
@@ -17,7 +17,7 @@ client.on ("message", message => {
          var help_embed = new Discord.RichEmbed()
          .setColor("#FFBF00")
          .setTitle("**Commande disponible**")
-         .addField("prefix", "prefix = ;", true)
+         .addField("prefix", "prefix = $", true)
          .addField("help", "afficher le panel d'aide", true)
          .addField("spam", "spam + (message)", true)
          .addField("stop", "commande pour arreter le spam", true)
@@ -45,5 +45,15 @@ client.on("message", message => {
                 }
             });
         }
+    }
+});
+
+client.on ("message", message => {
+    if(message.content.startsWith(prefix + "say")){
+        let sayw = message.content.split(" ")
+        sayw.shift();
+        message.delete();
+        if(!sayw[0]) return message.reply("Entrez un mot valide !")
+        message.channel.send(sayw);
     }
 });
