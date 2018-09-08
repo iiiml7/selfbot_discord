@@ -54,6 +54,5 @@ client.on ("message", message => {
         let sayw = message.content.split(" ")
         sayw.shift();
         if(!sayw[0]) return message.reply("Entrez un mot valide !")
-        message.channel.send(sayw);
     }
 });
