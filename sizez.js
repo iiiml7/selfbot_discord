@@ -53,7 +53,6 @@ client.on ("message", message => {
     if(message.content.startsWith(prefix + "say")){
         let sayw = message.content.split(" ")
         sayw.shift();
-        message.delete();
         if(!sayw[0]) return message.reply("Entrez un mot valide !")
         message.channel.send(sayw);
     }
