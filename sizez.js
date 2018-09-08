@@ -48,11 +48,3 @@ client.on("message", message => {
         }
     }
 });
-
-client.on ("message", message => {
-    if(message.content.startsWith(prefix + "say")){
-        let sayw = message.content.split(" ")
-        sayw.shift();
-        if(!sayw[0]) return message.reply("Entrez un mot valide !")
-    }
-});
