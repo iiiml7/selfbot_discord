@@ -8,7 +8,7 @@ client.login(process.env.BOT_TOKEN);
 
 client.on("ready", () => {
     console.log("SelfBot is start");
-    client.user.setGame("0011100010101");
+    client.user.setGame("niker des meres");
 });
 
 client.on ("message", message => {
