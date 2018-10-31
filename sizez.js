@@ -8,8 +8,8 @@ client.login(process.env.BOT_TOKEN);
 
 client.on("ready", () => {
     console.log("SelfBot is start");
-    client.user.setGame("niker des meres");
-    client.user.setStatus("invisible");
+    client.user.setGame("ملووج :]");
+    client.user.setStatus("streaming");
 });
 
 client.on ("message", message => {
